@@ -15,7 +15,7 @@ def getContact(filename, outputFilename):
     match = re.findall(pattern,data,re.DOTALL)
 
     for contact in match:
-        pattern = r'(?s)item1.TEL:.*?\n'
+        pattern = r'(?s)TEL;TYPE=CELL:.*?\n'
         match = str(re.findall(pattern,contact,re.DOTALL))
         item = match.strip('\n').split(':')
         try:
